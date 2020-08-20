@@ -14,6 +14,14 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
   &__background {
     height: 6rem;
@@ -25,6 +33,14 @@
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
     transition: transform 0.8s;
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
     //transform: scale(80);
   }
   &__nav {
@@ -62,6 +78,9 @@
       background-size: 240%;
       transition: all 0.5s;
       display: inline-block;
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
     }
     &:hover,
     &:active {
@@ -94,7 +113,7 @@
     &::after {
       content: "";
       position: absolute;
-      transition: all .7s;
+      transition: all 0.7s;
       left: 0;
     }
     &::before {
