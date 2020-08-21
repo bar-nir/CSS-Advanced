@@ -1,4 +1,5 @@
 .form {
+  margin-right: 0px;
   &__group:not(:last-child) {
     margin-bottom: 2rem;
   }
@@ -14,6 +15,9 @@
     width: 90%;
     display: block;
     transition: all 0.3s;
+    @include respond(phone) {
+      width: 100%;
+    }
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -41,16 +45,26 @@
   }
   &__radio-input {
     display: none;
+    
   }
   &__radio-group {
     width: 49%;
     display: inline-block;
+    @include respond(tab-port) {
+      widows: 100%;
+      display: block;
+      margin-bottom: 3rem;
+    }
   }
   &__radio-label {
     font-size: 1.6rem;
     position: relative;
     cursor: pointer;
     padding-left: 4.5rem;
+    @include respond(phone){
+      width: 100%;
+      padding-left: 3rem;
+    }
   }
   &__radio-button {
     height: 3rem;
